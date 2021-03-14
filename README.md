@@ -5,9 +5,9 @@
 
 ## Java知识网络思维导图
 
-目前思维导图只涵盖Java虚拟机部分，后续我会陆续补全整个Java体系内容，持续更新，文章会第一时间发布在公众号，可以扫码关注以便及时获得更新。
+目前思维导图只涵盖Java虚拟机和部分Java多线程，后续我会陆续补全整个Java体系内容，持续更新，文章会第一时间发布在公众号，可以扫码关注以便及时获得更新。
 
-![Java知识体系.png](http://ww1.sinaimg.cn/large/69ad3470gy1goe256ee2ej21525apqjt.jpg)
+![Java.png](http://ww1.sinaimg.cn/large/69ad3470gy1gojvaocntdj22zc7ae4qq.jpg)
 
 
 ## Java虚拟机
