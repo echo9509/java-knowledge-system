@@ -7,7 +7,7 @@
 
 目前思维导图只涵盖Java虚拟机和部分Java多线程，后续我会陆续补全整个Java体系内容，持续更新，文章会第一时间发布在公众号，可以扫码关注以便及时获得更新。
 
-![Java.png](http://ww1.sinaimg.cn/large/69ad3470gy1gojvaocntdj22zc7ae4qq.jpg)
+![Java知识体系.png](http://ww1.sinaimg.cn/large/69ad3470gy1gq7fchjmk7j21cw2zx4i1.jpg)
 
 
 ## Java虚拟机
@@ -55,3 +55,14 @@
 2. [Java语法糖](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484483&idx=1&sn=b5802b3c2995197e8ff3b556c8e34fd1&chksm=fddf497bcaa8c06d247e098bd434e6bbfc2b1a2334c7f9ba2ff3e724435fb4afee1856b1f3a2&token=1098290018&lang=zh_CN#rd)
 3. [后端编译JIT原理](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484493&idx=1&sn=676fe0aa750dc99c5712aac26b74f933&chksm=fddf4975caa8c063ca69f2ce7a109c7ac15b2becde8811ffb7e7c0b9976c8c77fa30d0cf2edf&token=1098290018&lang=zh_CN#rd)
 4. [JIT即时编译器](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484516&idx=1&sn=a1f65aee10c7aaadd0b75ba789081f3b&chksm=fddf495ccaa8c04ad5700a9def39eb558fa38fb03a9c767b1323bca5de9efe9aeabd9c0f42a8&token=1098290018&lang=zh_CN#rd)
+
+
+## Java线程
+1. [Java内存模型(1)](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484536&idx=1&sn=b35ecd8b794302ce44d2a27bae8a5736&chksm=fddf4940caa8c0560f36cff0115134d2ed425175020103b1611a604e2380cdadb7a71bfad636&token=1787283152&lang=zh_CN#rd)
+2. [Java内存模型(2)](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484543&idx=1&sn=4060fa92c958adddbb9fa01b694f10c6&chksm=fddf4947caa8c051a28f529dc4120bb7f810a7dd3c1dba212fe2f60772fb21d29f4e18ff971c&token=1787283152&lang=zh_CN#rd)
+3. [Java线程实现](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484557&idx=1&sn=230ae8a3781863fd8bb52b927f5fe2db&chksm=fddf49b5caa8c0a3f771079ddc178c546b87082a44fda306d9d9c0daedfc4b566bcaba198556&token=1787283152&lang=zh_CN#rd)
+4. [Java线程状态及调度](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484572&idx=1&sn=9857eb7df003fb61bf1c0556fd35fc68&chksm=fddf49a4caa8c0b28b3d77ed2b0660e826042d143d61db4872ef6d21ff14018893c345c55351&token=1787283152&lang=zh_CN#rd)
+5. [AQS](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484616&idx=1&sn=b219c6254dfed244b15428e190395cef&chksm=fddf49f0caa8c0e6767b33571f528b319ea6014a34bebdc1b846472fc838be76e7afe5382f8b&token=1787283152&lang=zh_CN#rd)
+6. [Java线程池(1)](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484638&idx=1&sn=b93cb543d79401852de14b03ead8dc8e&chksm=fddf49e6caa8c0f0fbdf3922a49945112f4bd5b25a39acebfae5ade0b279e05ba3e21acbbac8&token=1787283152&lang=zh_CN#rd)
+7. [Java线程池(2)](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484684&idx=1&sn=4370e9ed4476f06b61c6bea3198f1a2c&chksm=fddf4834caa8c1221f3999ec40a5fb5795dcce0239fa974368d55ae83fd705523c3d3ef5a104&token=1787283152&lang=zh_CN#rd)
+8. [ConcurrentHashMap深度分析](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484740&idx=1&sn=ee8293353a28f4039f63a7a68160bec1&chksm=fddf487ccaa8c16afb439f6ac3ff5e21d83fe26ff6ec505ad1a1b457311df354a8fbc48feee1&token=1787283152&lang=zh_CN#rd)
