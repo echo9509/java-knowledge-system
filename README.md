@@ -7,7 +7,7 @@
 
 目前思维导图只涵盖Java虚拟机和部分Java多线程，后续我会陆续补全整个Java体系内容，持续更新，文章会第一时间发布在公众号，可以扫码关注以便及时获得更新。
 
-![Java知识体系.png](http://ww1.sinaimg.cn/large/69ad3470gy1gq7fchjmk7j21cw2zx4i1.jpg)
+![Java知识体系.png](http://ww1.sinaimg.cn/large/69ad3470gy1gqj50d9ll3j21fu2zx7od.jpg)
 
 
 ## Java虚拟机
@@ -66,3 +66,7 @@
 6. [Java线程池(1)](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484638&idx=1&sn=b93cb543d79401852de14b03ead8dc8e&chksm=fddf49e6caa8c0f0fbdf3922a49945112f4bd5b25a39acebfae5ade0b279e05ba3e21acbbac8&token=1787283152&lang=zh_CN#rd)
 7. [Java线程池(2)](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484684&idx=1&sn=4370e9ed4476f06b61c6bea3198f1a2c&chksm=fddf4834caa8c1221f3999ec40a5fb5795dcce0239fa974368d55ae83fd705523c3d3ef5a104&token=1787283152&lang=zh_CN#rd)
 8. [ConcurrentHashMap深度分析](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484740&idx=1&sn=ee8293353a28f4039f63a7a68160bec1&chksm=fddf487ccaa8c16afb439f6ac3ff5e21d83fe26ff6ec505ad1a1b457311df354a8fbc48feee1&token=1787283152&lang=zh_CN#rd)
+9. [乐观锁](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484774&idx=1&sn=4fa91d6e2bd4cbe4a4a258670cda05a2&chksm=fddf485ecaa8c1487f7ed13ddf6730a195cd387a1b5764a8b967ace886aefdeda75c7d5f6cb6&token=1861080647&lang=zh_CN#rd)
+10. [悲观锁](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484801&idx=1&sn=bc65873db0fd54cf4d015fc921ae8410&chksm=fddf48b9caa8c1afce3ec865ef56e6450bca364fe17db4a93ba365e809dad6fad68227bad7c3&token=1861080647&lang=zh_CN#rd)
+11. [锁优化](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484823&idx=1&sn=9fa18bcdcba265f579356e7e1749d2b2&chksm=fddf48afcaa8c1b9a5bdc099c48f30a44e9a8fe582df35f39a8802ecd7388eef63aea68b05d7&token=1861080647&lang=zh_CN#rd)
+12. [Future Java](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484869&idx=1&sn=551ca0c05e8e8583f9ca50cc78d7d08b&chksm=fddf48fdcaa8c1eb89a8de3d5aea8e33efbb87a15cce6bef30df093580935d1df1346abca215&token=1861080647&lang=zh_CN#rd)
