@@ -1,3 +1,8 @@
+
+**扫码关注微信公众号(Different Java)**
+
+![qrcode_for_gh_1706f00849c9_344.jpg](http://ww1.sinaimg.cn/large/69ad3470gy1gmd7g8h298j209k09kt8n.jpg)
+
 # 摘要
 
 1. 数据库读写分离
