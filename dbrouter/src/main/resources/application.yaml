@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    master:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: master
+      password: master
+      jdbc-url: jdbc:mysql://127.0.0.1:4406/test?autoReconnect=true&useSSL=true&nullCatalogMeansCurrent=true
+    slave:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: slave
+      password: slave
+      jdbc-url: jdbc:mysql://127.0.0.1:5506/test?autoReconnect=true&useSSL=true&nullCatalogMeansCurrent=true

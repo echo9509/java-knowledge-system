@@ -1,0 +1,12 @@
+[mysqld]
+
+skip-host-cache
+skip-name-resolve
+
+#主数据库端ID号
+server-id = 1
+# 开启二进制日志
+log_bin = /var/log/mysql/mysql-bin.log
+binlog_format = ROW
+#需要复制的数据库名，如果复制多个数据库，重复设置这个选项即可
+binlog_do_db = test

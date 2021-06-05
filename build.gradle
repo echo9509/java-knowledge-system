@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id "com.diffplug.spotless" version "5.11.0"
+}
+
+apply from: 'gradle/spotless.gradle'
+
+group = 'cn.sh'
+version = '1.0.0-SNAPSHOT'
+
+
+allprojects {
+
+    tasks.withType(AbstractCompile) {
+        options.encoding = "UTF-8"
+    }
+
+    javadoc {
+        options.encoding = 'UTF-8'
+    }
+}
