@@ -91,13 +91,21 @@ public static class DataSourceHolder {
 }
 
 /**
- * 此处的Order保证了数据源的设置必定晚于事务与数据库建立连接
- * 保证了@Transactional建立的数据库连接必定是默认的主库连接
+ * masterDatasource必须保证是写数据源
  */
-@Aspect
-@Component
-@Order
-public class DynamicDataSourceAspect {
+@Configuration
+public class DynamicDatSourceConfig {
+
+    @Bean(name = "dynamicDatasource")
+    @Primary
+    public DynamicDatasource dynamicDatasource(
+            @Qualifier("masterDatasource") DataSource masterSource,
+            @Qualifier("slaveDatasource") DataSource slaveSource) {
+        Map<Object, Object> dataSources = new HashMap<>(2);
+        dataSources.put(DataSourceName.WRITE, masterSource);
+        dataSources.put(DataSourceName.READ, slaveSource);
+        return new DynamicDatasource(masterSource, dataSources);
+    }
 }
 ```
 
