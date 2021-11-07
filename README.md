@@ -71,6 +71,35 @@
 11. [锁优化](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484823&idx=1&sn=9fa18bcdcba265f579356e7e1749d2b2&chksm=fddf48afcaa8c1b9a5bdc099c48f30a44e9a8fe582df35f39a8802ecd7388eef63aea68b05d7&token=1861080647&lang=zh_CN#rd)
 12. [Future Java](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484869&idx=1&sn=551ca0c05e8e8583f9ca50cc78d7d08b&chksm=fddf48fdcaa8c1eb89a8de3d5aea8e33efbb87a15cce6bef30df093580935d1df1346abca215&token=1861080647&lang=zh_CN#rd)
 
+## 操作系统
+
+1. [如何加载操作系统](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484944&idx=1&sn=c53320f40439c1a458814d785b3573d6&chksm=fddf4b28caa8c23eca907b161951b55579efc1566e965f5f921c72221b15a73212d21460f276&token=535780139&lang=zh_CN#rd)
+2. [CPU工作原理](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484998&idx=1&sn=94fa8cac7be516c520b698fd3d1f7b9b&chksm=fddf4b7ecaa8c268a0432244c8c80ce07e26fcde0969a36aaaa3edfab91364735b11df589634&token=535780139&lang=zh_CN#rd)
+3. [实模式下CPU获取数据](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485031&idx=1&sn=a672c9ae2269a8aa4cfc70bd5f47035d&chksm=fddf4b5fcaa8c249e129904d3bdc8f944d65afd557060803b0dcf141d78a24b6414a0da66ad9&token=535780139&lang=zh_CN#rd)
+4. [CPU保护模式](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485072&idx=1&sn=606d1e4e9f4849eac9277f49125cbd4f&chksm=fddf4ba8caa8c2be9e7d798a5b48b42b4374f9da3bd72f5dc45f014c259ca4a27e1eb3fdea28&token=535780139&lang=zh_CN#rd)
+5. [全局描述符表](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485093&idx=1&sn=3fea2532d62934622dbfe43d80b91eda&chksm=fddf4b9dcaa8c28b7b92e770c7d18a1ca57c81d190def61d94fee1fd631a5ac58d845423bfb8&token=535780139&lang=zh_CN#rd)
+6. [开启保护模式](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485116&idx=1&sn=9812cde285adb2b829f3b3ca5e1f4fe3&chksm=fddf4b84caa8c2928fa9cdeb5ad905586ac8afb2a6ab473ad8b39af1ef441415124c14cca71f&token=535780139&lang=zh_CN#rd)
+7. [内存管理机制-页表](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485188&idx=1&sn=573987437959716761b299136efea369&chksm=fddf4a3ccaa8c32a5fa44664f2613a143c7f4e89cb914b6c1b9730579e4a69a7a21e401c541d&token=535780139&lang=zh_CN#rd)
+8. [操作系统中断](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485216&idx=1&sn=9f90e479f89f561e094358fb1463d782&chksm=fddf4a18caa8c30e0cb7dcfa9c8c558060d1ac23921f2f985a17d645304bda39ab6d7c54248d&token=535780139&lang=zh_CN#rd)
+9. [中断描述符表](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485244&idx=1&sn=bcf6182ebaaedc7815559aa2ebfce7f3&chksm=fddf4a04caa8c312fac32bf7d819ea4a9da3103e9ba649c1c7819b7e1c747cdbc3aca1b55a9a&token=535780139&lang=zh_CN#rd)
+10. [中断控制器8259](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485305&idx=1&sn=ac94637cdf83a08fea9692958ef72cf9&chksm=fddf4a41caa8c3570c4a3299c1f8db7ec2f51e8199498beaeb933c7e9385f633ad132144011c&token=535780139&lang=zh_CN#rd)
+11. [进程管理](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485346&idx=1&sn=b3d6be67fac0678273fae2dffe4856df&chksm=fddf4a9acaa8c38cc5ab5d0f77290abdf9028b288a02f7c885cbb24e0d6d5e16613acceeb107&token=535780139&lang=zh_CN#rd)
+12. [线程管理](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485362&idx=1&sn=1fb653df4d249ef1a2500581a4fdf9ca&chksm=fddf4a8acaa8c39c89b7088062f2ea6ba4dc54a11020e11007237fc9749c4f33fb6dc4d3ad19&token=535780139&lang=zh_CN#rd)
+13. [进程调度](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485374&idx=1&sn=15cd14ba234dc582e49f939279b3e345&chksm=fddf4a86caa8c39008358fa466e37d0f2575e977d3353229cfc69ff52afe69ee50dc06b5c2b6&token=535780139&lang=zh_CN#rd)
+14. [进程通信-](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485401&idx=1&sn=dc026b1c819d28f533b0ca05e6c26bc4&chksm=fddf4ae1caa8c3f7accadb9c5e37f839cf13be64462790fb83c6ec5172b654cd93976061817b&token=535780139&lang=zh_CN#rd)
+15. [进程通信二](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485413&idx=1&sn=04b7fd8fa5267a260e3c8319f6e24252&chksm=fddf4addcaa8c3cb227da7bd06882bc5c1ff6848d89d71e9e68fe08d3813a74f447e7d5d370e&token=535780139&lang=zh_CN#rd)
+16. [Socket通信](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485424&idx=1&sn=92f0bdcbd34666dc1dcf22afb1a4fe63&chksm=fddf4ac8caa8c3defc747b39f922003bb911435b2350ce8618081823dba67f763469147ea5aa&token=535780139&lang=zh_CN#rd)
+17. [内存页面置换](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485438&idx=1&sn=275b2c8be4f2c0ff5b27cee0450d3e2d&chksm=fddf4ac6caa8c3d096222538f38495d061e1abb46d599740e3d9cadab3fb101db22efcc1c5e2&token=535780139&lang=zh_CN#rd)
+18. [磁盘调度](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485462&idx=1&sn=1159e8aa617c4eb9217a8c29405ca55a&chksm=fddf452ecaa8cc3849dacfbbbae29492dc97b247a4d3c2c67d99faf5609f9ef141a8581218bd&token=535780139&lang=zh_CN#rd)
+19. [文件系统](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485473&idx=1&sn=3bbd756f17e9afd77dfaf8234234d9ce&chksm=fddf4519caa8cc0f7238ac5699ee9c7cb2337457f02556ec6787dcd1d09e5aa1cd4fa4cc963a&token=535780139&lang=zh_CN#rd)
+20. [文件存储](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485490&idx=1&sn=276802d8a6427ed1edacca23b304def5&chksm=fddf450acaa8cc1c251e4ef967cfee86dc0e4443f8e8bd796baf57b712f0bbbb987e99cf0027&token=535780139&lang=zh_CN#rd)
+21. [空闲空间管理](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485510&idx=1&sn=979b7806ec7ef29fd811ce3d802332a5&chksm=fddf457ecaa8cc6825435120c40e4349d6c92310b453d448ea888cfbb0025971c3db83668ebf&token=535780139&lang=zh_CN#rd)
+22. [文件IO](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485521&idx=1&sn=4c0fb1d20e17ecac9a80f4457a3edeed&chksm=fddf4569caa8cc7f2e4b48d76b725971e3285365c15a70b7870c8d3165c8d88535de377fb7d4&token=535780139&lang=zh_CN#rd)
+23. [设备管理](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485538&idx=1&sn=0651fd6ed3a368662062f25188eae0b1&chksm=fddf455acaa8cc4c23a043c614f2ba96635e3f04da9136aa7720c4487077bf1bae347d02ede1&token=535780139&lang=zh_CN#rd)
+24. [网络包发送历程](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485553&idx=1&sn=c28669a897bc981e2dde440667704f9e&chksm=fddf4549caa8cc5fcfb365c5c908b421f8d5e81205a8bb7554e26a21f7f0fd7ec9ac8655cad2&token=535780139&lang=zh_CN#rd)
+25. [零拷贝](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247485567&idx=1&sn=a6a4b8767039819af43c69e6a0fa9a43&chksm=fddf4547caa8cc511739d67850c278128e4ae30fb8adcadfd240a1e3f851e828b1ae5e5bad17&token=535780139&lang=zh_CN#rd)
+
+
 ## Spring
 
 1.[数据库读写分离](https://mp.weixin.qq.com/s?__biz=MzU4ODM1NjY5NQ==&mid=2247484916&idx=1&sn=ae8f771c44a195d997698c604418e988&chksm=fddf48cccaa8c1dad1302f2bcc5e577592b0b0bffcd114ed54256ac4d6fd8f4be9abba4fe29e&token=1085078778&lang=zh_CN#rd)
