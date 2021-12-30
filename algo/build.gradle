@@ -1,0 +1,6 @@
+plugins {
+    id 'java'
+}
+
+group 'cn.sh'
+version '1.0.0-SNAPSHOT'

@@ -9,4 +9,5 @@
 
 rootProject.name = 'java-knowledge-system'
 include 'dbrouter'
+include 'algo'
 
