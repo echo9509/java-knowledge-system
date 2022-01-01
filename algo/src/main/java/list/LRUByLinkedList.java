@@ -1,4 +1,4 @@
-package lru;
+package list;
 
 import java.util.Objects;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 单向链表实现LRU淘汰算法
  * 越靠近尾部访问时间越早
  */
-public class LRUByLinkList<T> {
+public class LRUByLinkedList<T> {
 
     private final static int DEFAULT_CAPACITY = 10;
 
@@ -26,11 +26,11 @@ public class LRUByLinkList<T> {
      */
     private final int capacity;
 
-    public LRUByLinkList() {
+    public LRUByLinkedList() {
         this(DEFAULT_CAPACITY);
     }
 
-    public LRUByLinkList(int capacity) {
+    public LRUByLinkedList(int capacity) {
         this.capacity = capacity;
         this.length = 0;
         headNode = new Node<>();
@@ -159,7 +159,7 @@ public class LRUByLinkList<T> {
     }
 
     public static void main(String[] args) {
-        LRUByLinkList<Integer> list = new LRUByLinkList<>();
+        LRUByLinkedList<Integer> list = new LRUByLinkedList<>();
         Scanner scanner = new Scanner(System.in);
         while (true) {
             list.putNode(scanner.nextInt());
