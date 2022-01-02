@@ -8,3 +8,5 @@
 - ReservedLinkedList：反置链表
 - MergeOrderLinkedList：两个有序链表合并
 - RingInLinkedList：检测链表中是否有环
+- RemoveNodeInLinkedList：删除链表中倒数第N个节点
+- GetMidNodeInLinkedList：求链表的中间节点
