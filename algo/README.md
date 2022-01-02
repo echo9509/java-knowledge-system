@@ -1,5 +1,5 @@
 
-# Linked链表
+# 链表
 
 **package list下面**
 
