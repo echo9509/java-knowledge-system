@@ -53,3 +53,4 @@
 **package queue下面**
 
 - ArrayQueue：基于数组实现的有界队列
+- CircularQueue：基于数组的循环队列
