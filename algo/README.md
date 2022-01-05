@@ -54,3 +54,4 @@
 
 - ArrayQueue：基于数组实现的有界队列
 - CircularQueue：基于数组的循环队列
+- ConcurrentBlockQueue：基于重入锁实现的循环阻塞并发安全队列
