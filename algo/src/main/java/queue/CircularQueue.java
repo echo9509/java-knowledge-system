@@ -43,7 +43,7 @@ public class CircularQueue<T> {
     }
 
     public void print() {
-        System.out.println("当前队列内容：");
+        System.out.print("当前队列内容：");
         int end = head + size;
         for (int i = head ; i < end; i ++) {
             System.out.print(items[i % capacity] + ",");
