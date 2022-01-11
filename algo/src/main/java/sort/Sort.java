@@ -4,6 +4,59 @@ import java.util.Objects;
 
 public class Sort {
 
+
+    /**
+     * 归并排序
+     * 时间复杂度为O(nlogn)
+     * @param arrays
+     */
+    public static void mergeSort(int[] arrays) {
+        mergeSort(arrays, 0, arrays.length - 1);
+    }
+
+    private static void mergeSort(int[] arrays, int start, int end) {
+        if (start >= end) {
+            return;
+        }
+        int mid  = start + (end - start) / 2;
+        mergeSort(arrays, start, mid);
+        mergeSort(arrays, mid + 1, end);
+        mergeArrays(arrays, start, mid, end);
+    }
+
+    /**
+     * 合并
+     * @param arrays
+     * @param start
+     * @param mid
+     * @param end
+     */
+    private static void mergeArrays(int[] arrays, int start, int mid, int end) {
+        int i = start;
+        int j = mid + 1;
+        int k = 0;
+        int[] temp = new int[end - start + 1];
+        while (i <= mid && j <= end) {
+            if (arrays[i] <= arrays[j]) {
+                temp[k++] = arrays[i++];
+            } else {
+                temp[k++] = arrays[j++];
+            }
+        }
+        int s = i;
+        int e = mid;
+        if (j <= end) {
+            s = j;
+            e = end;
+        }
+        while (s <= e) {
+            temp[k++] = arrays[s++];
+        }
+        for (i= 0; i <= end - start; i++) {
+            arrays[i + start] = temp[i];
+        }
+    }
+
     /**
      * 选择排序
      * 时间复杂度O(n²)
@@ -104,10 +157,16 @@ public class Sort {
 //        System.out.print("插入排序后");
 //        print(arrays);
 
-        System.out.print("选择排序前");
+//        System.out.print("选择排序前");
+//        print(arrays);
+//        selectionSort(arrays);
+//        System.out.print("选择排序后");
+//        print(arrays);
+
+        System.out.print("归并排序前");
         print(arrays);
-        selectionSort(arrays);
-        System.out.print("选择排序后");
+        mergeSort(arrays);
+        System.out.print("归并排序后");
         print(arrays);
     }
 }
