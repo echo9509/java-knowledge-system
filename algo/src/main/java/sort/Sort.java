@@ -8,6 +8,7 @@ public class Sort {
     /**
      * 归并排序
      * 时间复杂度为O(nlogn)
+     * 空间复杂度为O(n)
      * @param arrays
      */
     public static void mergeSort(int[] arrays) {
