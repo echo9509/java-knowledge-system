@@ -4,6 +4,41 @@ import java.util.Objects;
 
 public class Sort {
 
+    /**
+     * 快速排序
+     * 时间复杂度O(logn)
+     * 空间复杂度O(1)
+     * @param arrays
+     */
+    public static void quickSort(int[] arrays) {
+        quickSort(arrays, 0, arrays.length - 1);
+    }
+
+    private static void quickSort(int[] arrays, int start, int end) {
+        if (start >= end) {
+            return;
+        }
+        int mid = partition(arrays, start, end);
+        quickSort(arrays, start, mid - 1);
+        quickSort(arrays, mid + 1, end);
+    }
+
+    private static int partition(int[] arrays, int start, int end) {
+        int pivot = arrays[end];
+        int i = start;
+        for (int j = start; j < end; j++) {
+            if (arrays[j] < pivot) {
+                int temp = arrays[i];
+                arrays[i] = arrays[j];
+                arrays[j] = temp;
+                i++;
+            }
+        }
+        int temp = arrays[i];
+        arrays[i] = arrays[end];
+        arrays[end] = temp;
+        return i;
+    }
 
     /**
      * 归并排序
@@ -164,10 +199,16 @@ public class Sort {
 //        System.out.print("选择排序后");
 //        print(arrays);
 
-        System.out.print("归并排序前");
+//        System.out.print("归并排序前");
+//        print(arrays);
+//        mergeSort(arrays);
+//        System.out.print("归并排序后");
+//        print(arrays);
+
+        System.out.print("快速排序前");
         print(arrays);
-        mergeSort(arrays);
-        System.out.print("归并排序后");
+        quickSort(arrays);
+        System.out.print("快速排序后");
         print(arrays);
     }
 }

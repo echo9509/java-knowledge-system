@@ -94,9 +94,12 @@
 
 归并排序是**空间复杂度为O(n)**，**时间复杂度为O(nlogn)**的**(稳定/非稳定)非原地排序算法**。
 
+快速排序是**空间复杂度为O(1)**，**时间复杂度为O(nlogn)**的**稳定原地排序算法**。
+
 **package sort下：**
 
 - Sort.bubbleSort：冒泡排序实现
 - Sort.insertionSort：冒泡排序实现
 - Sort.selectionSort：选择排序实现
 - Sort.mergeSort：归并排序实现
+- Sort.quickSort：快速排序实现
