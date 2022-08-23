@@ -1,3 +1,20 @@
+|功能|包名.类名||类型|解法|
+|---|---|---|---|---|
+|数组中重复的数字|offer.DuplicateNumberInArray|数组|HashSet|
+|二维数组中的查找|offer.MatrixSearch|数组|下标移动，尽可能缩小下标移动的范围|
+
+
+# offer
+- DuplicateNumberInArray：
+
+
+# LeetCode
+
+1. MinStack：剑指Offer 30.定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，调用 min、push 及 pop 的时间复杂度都是 O(1)
+2. Solution：剑指Offer 06.从尾到头打印链表，输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
+3. Offer24：剑指Offer 24.反转链表，定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。
+4. Offer35：剑指Offer 35.复杂链表的复制，实现copyRandomList函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个next指针指向下一个节点，还有一个random
+   指针指向链表中的任意节点或者null
 
 # 链表
 
@@ -83,7 +100,6 @@
 逆有序度 = 满有序度 - 有序度。
 
 
-
 ### 排序算法实现
 
 冒泡排序是**空间复杂度为O(1)**，**时间复杂度为O(n²)**的**稳定原地排序算法**。
@@ -96,6 +112,7 @@
 
 快速排序是**空间复杂度为O(1)**，**时间复杂度为O(nlogn)**的**稳定原地排序算法**。
 
+
 **package sort下：**
 
 - Sort.bubbleSort：冒泡排序实现
@@ -103,3 +120,4 @@
 - Sort.selectionSort：选择排序实现
 - Sort.mergeSort：归并排序实现
 - Sort.quickSort：快速排序实现
+- Sort.countingSort：计数排序

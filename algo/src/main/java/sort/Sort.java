@@ -4,6 +4,41 @@ import java.util.Objects;
 
 public class Sort {
 
+
+    /**
+     * 计数排序
+     * @param arrays
+     */
+    public static void countingSort(int[] arrays) {
+        int n = arrays.length;
+        if (n <= 1) {
+            return;
+        }
+        int max = arrays[0];
+        for (int i = 1; i < n ; i++) {
+            if (max < arrays[i]) {
+                max = arrays[i];
+            }
+        }
+        // 准备计数数组
+        int [] c = new int[max + 1];
+        for (int i = 0; i < n; i++) {
+            c[arrays[i]]++ ;
+        }
+        for (int i = 1; i <= max; i++) {
+            c[i] = c[i-1] + c[i];
+        }
+        int [] r = new int[n];
+        for (int i = n - 1; i >= 0; i--) {
+            int index = c[arrays[i]] - 1;
+            r[index] = arrays[i];
+            c[arrays[i]]--;
+        }
+        for (int i = 0; i < n; i++) {
+            arrays[i] = r[i];
+        }
+    }
+
     /**
      * 快速排序
      * 时间复杂度O(logn)
@@ -205,10 +240,15 @@ public class Sort {
 //        System.out.print("归并排序后");
 //        print(arrays);
 
-        System.out.print("快速排序前");
+//        System.out.print("快速排序前");
+//        print(arrays);
+//        quickSort(arrays);
+//        System.out.print("快速排序后");
+//        print(arrays);
+        System.out.print("计数排序前");
         print(arrays);
-        quickSort(arrays);
-        System.out.print("快速排序后");
+        countingSort(arrays);
+        System.out.print("计数排序后");
         print(arrays);
     }
 }
