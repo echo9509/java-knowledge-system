@@ -2,6 +2,8 @@
 |---|---|---|---|---|
 |数组中重复的数字|offer.DuplicateNumberInArray|数组|HashSet|
 |二维数组中的查找|offer.MatrixSearch|数组|下标移动，尽可能缩小下标移动的范围|
+|替换空格|offer.SpacesReplace|数组|字符串拆成数组处理|
+|重建二叉树|offer.BTreeRebuild|数组|递归分别处理左子树右子树（中序遍历定位左右子树长度，前序遍历定位子树根节点）|
 
 
 # offer
