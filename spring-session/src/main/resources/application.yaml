@@ -1,0 +1,7 @@
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 55000
+    password: redispw
+  session:
+    store-type: redis

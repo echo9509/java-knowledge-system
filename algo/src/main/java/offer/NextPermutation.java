@@ -2,7 +2,7 @@ package offer;
 
 /**
  * @author sh
- * 
+ *
  * https://leetcode.cn/problems/next-permutation/description/?favorite=2cktkvj
  *
  * 整数数组的一个 排列  就是将其所有成员以序列或线性顺序排列。
