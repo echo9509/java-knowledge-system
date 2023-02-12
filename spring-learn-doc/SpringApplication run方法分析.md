@@ -301,3 +301,16 @@ public void refresh() throws BeansException, IllegalStateException {
     }
 }
 ```
+
+refreshContext方法是比较关键的方法，该方法主要用来完成各种非延迟加载Bean的初始化以及ContextRefreshedEvent事件的发布，这个方法后续单独一篇详细讲
+
+## 发布ApplicationStartedEvent
+
+```java
+listeners.started(context, timeTakenToStartup);
+callRunners(context, applicationArguments);
+```
+- listeners.started中会发布ApplicationStartedEvent事件
+- callRunners方法中，通过应用上下文来获取所有ApplicationRunner以及CommandLineRunner接口实现类，接下来逐个调用其run方法
+
+
