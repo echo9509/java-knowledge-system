@@ -1,6 +1,6 @@
 SpringApplication在构造完以后，我们会调用run方法启动应用程序，run方法的主要逻辑有：
 
-![image.png](http://tva1.sinaimg.cn/large/007uBA8Ggy1hasppl20gej306l0h53zz.jpg)
+![image.png](https://tva1.sinaimg.cn/large/007uBA8Ggy1hb0rqi00qjj306m0h5myo.jpg)
 
 #### SpringApplication Run方法分析
 
@@ -100,9 +100,9 @@ public void starting(ConfigurableBootstrapContext bootstrapContext) {
 - 调用SpringApplicationRunListener的starting方法（在这里spring-boot-2.7.7中的是EventPublishingRunListener）
 - EventPublishingRunListener中的starting方法就是广播一个ApplicationStartingEvent事件，此时对ApplicationStartingEvent感兴趣的Listeners就会对其进行处理(调用其onApplicationEvent方法)，下图是对该事件感兴趣的Listeners
 
-![image.png](http://tva1.sinaimg.cn/large/007uBA8Ggy1haxoa0sl4wj30e203gt9u.jpg)
+![image.png](https://tva1.sinaimg.cn/large/007uBA8Ggy1hb0rr9k6uvj30dx033wfj.jpg)
 
-## 创建Environment
+#### 创建Environment
 
 ```java
 public ConfigurableApplicationContext run(String... args) {
@@ -142,13 +142,13 @@ protected void configureEnvironment(ConfigurableEnvironment environment, String[
 - 接下来会通过configureEnvironment来初始化参数，该方法首先会在Environment中设置一个ConversionService(ApplicationConversionService),然后将命令行中的参数添加到Environment的MutablePropertySources中
 - 接下来通过listeners.environmentPrepared发布ApplicationEnvironmentPreparedEvent事件，对此事件感兴趣的Listener将会对此事件进行处理
 
-![image.png](http://tva1.sinaimg.cn/large/007uBA8Ggy1hb0m2lajsej30dl053wga.jpg)
+![image.png](https://tva1.sinaimg.cn/large/007uBA8Ggy1hb0rrtd4f2j30bo048abg.jpg)
 
 - 当prepareEnvironment方法执行完成以后，Environment中的Property也处理完成，如下图：
 
-![image.png](http://tva1.sinaimg.cn/large/007uBA8Ggy1hb0mha3t2ij31810f2dv1.jpg)
+![image.png](https://tva1.sinaimg.cn/large/007uBA8Ggy1hb0rsdlisjj317o0erncg.jpg)
 
-## 创建ApplicationContext
+#### 创建ApplicationContext
 
 ```java
 protected ConfigurableApplicationContext createApplicationContext() {
@@ -158,7 +158,7 @@ protected ConfigurableApplicationContext createApplicationContext() {
 
 这里会默认创建一个AnnotationConfigServletWebServerApplicationContext类型的ApplicationContext。
 
-## 预处理应用上下文prepareContext
+#### 预处理应用上下文prepareContext
 
 ```java
 private void prepareContext(DefaultBootstrapContext bootstrapContext, ConfigurableApplicationContext context,
@@ -202,26 +202,21 @@ private void prepareContext(DefaultBootstrapContext bootstrapContext, Configurab
 - postProcessApplicationContext后置处理Context，主要是将Environment中的ConversionService对象放入到Context中的BeanFactory(DefaultListableBeanFactory)中
 - 紧接着在applyInitializers中会调用所有的ApplicationContextInitializer的initialize方法
 
-![image.png](http://tva1.sinaimg.cn/large/007uBA8Ggy1hb0nozbk2cj30di04wwgl.jpg)
+![image.png](https://tva1.sinaimg.cn/large/007uBA8Ggy1hb0rsxitngj30bq04c75v.jpg)
 
 - listeners.contextPrepared方法用来发布ApplicationContextInitializedEvent事件，对此事件感兴趣的Listeners将会对事件进行处理
 
-![image.png](http://tva1.sinaimg.cn/large/007uBA8Ggy1hb0o2lp0x1j30cz028mxx.jpg)
+![image.png](https://tva1.sinaimg.cn/large/007uBA8Ggy1hb0rt9vc26j30bt025dgg.jpg)
 
 - logStartupInfo和logStartupProfileInfo会打印启动详情和当前环境（profile）
 - context.getBeanFactory会获取到BeanFactory
 - beanFactory.registerSingleton方法会将对象注册到Bean管理容器中，这里首先会注册ApplicationArguments和Banner
 - context.addBeanFactoryPostProcessor会添加后置处理器
-
-![image.png](http://tva1.sinaimg.cn/large/007uBA8Ggy1hb0oy7jarej30lp02rtap.jpg)
-
 - load方法为会main方法所在的创建BeanDefinition，并注册进Spring上下文
-- listeners.contextLoaded会发布ApplicationPreparedEvent事件，下图Listener会对该事件感兴趣
-
-![image.png](http://tva1.sinaimg.cn/large/007uBA8Ggy1hb0pdldkq4j30cw02rdgn.jpg)
+- listeners.contextLoaded会发布ApplicationPreparedEvent事件
 
 
-## 刷新应用上下文refreshContext
+#### 刷新应用上下文refreshContext
 
 ```java
 private void refreshContext(ConfigurableApplicationContext context) {
@@ -304,7 +299,7 @@ public void refresh() throws BeansException, IllegalStateException {
 
 refreshContext方法是比较关键的方法，该方法主要用来完成各种非延迟加载Bean的初始化以及ContextRefreshedEvent事件的发布，这个方法后续单独一篇详细讲
 
-## 发布ApplicationStartedEvent
+#### 发布ApplicationStartedEvent
 
 ```java
 listeners.started(context, timeTakenToStartup);
