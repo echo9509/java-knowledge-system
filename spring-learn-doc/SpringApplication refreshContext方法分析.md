@@ -52,5 +52,7 @@ public void run() {
 - 首先判断Context是否还是active，如果不是active那么直接返回
 - 如果是active则调用Context的close方法将其关闭，并且等待Context关闭完成或者超时（默认超时时间10分钟）
 
-#### Context。close方法
+#### Context.close方法
 
+- 该方法首先会判断Context是否是Active并且没有被关闭过，如果满足active并且closed标识为false则执行接下来的关闭操作
+- 
