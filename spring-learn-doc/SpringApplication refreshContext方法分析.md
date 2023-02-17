@@ -55,4 +55,6 @@ public void run() {
 #### Context.close方法
 
 - 该方法首先会判断Context是否是Active并且没有被关闭过，如果满足active并且closed标识为false则执行接下来的关闭操作
-- 
+- 发布ContextClosedEvent事件
+- 通过LifecycleProcessor的onClose方法关闭所有实现了LifeCycle接口的Bean
+- 销毁其他的Bean
