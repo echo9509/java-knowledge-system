@@ -1,3 +1,8 @@
+#### 前言
+
+之所以写关于Agent的东西，是因为最近在搭建公司的链路系统，在整个链路系统中我们会使用到各种各样的Agent，通过探针这种形式，避免了对业务代码的侵入性。
+
+本篇只是开篇点题，实现一个统计方法的耗时时间的Agent，先直观感受一下Agent的作用，大量关于Agent的实现细节我们会在后续陆续更新。
 
 #### 什么是Java Agent?
 
@@ -26,6 +31,20 @@ public class Agent {
 
     public static void agentmain(String agentArgs, Instrumentation inst) {
         recordMethodCostTime(inst);
+        Class<?>[] classes = inst.getAllLoadedClasses();
+        try {
+            for (Class<?> c : classes) {
+                if (c.isAnnotation() || c.isInterface() || c.isArray() || c.isEnum()) {
+                    continue;
+                }
+                if (c.getName().startsWith("session.controller")) {
+                    // 重新装在我们的类
+                    inst.retransformClasses(c);
+                }
+            }
+        } catch (UnmodifiableClassException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void recordMethodCostTime(Instrumentation inst) {
@@ -83,7 +102,7 @@ Can-Retransform-Classes: true
 Premain-Class: cn.sh.agent.Agent
 ```
 
-#### 如何启动我们的Agent
+#### 如何静态加载Agent
 
 在Java程序启动时，我们通过-javaagent指定Agent的jar包，如下：
 
@@ -91,9 +110,36 @@ Premain-Class: cn.sh.agent.Agent
 -javaagent:/java-agent-1.0.0-SNAPSHOT.jar
 ```
 
+![image.png](https://s2.loli.net/2023/02/27/cgXDOsdohqW65rx.png)
+
 #### 如何动态加载Agent
 
+通过动态加载Agent，我们可以对程序运行中的class进行重新加载，利用此功能我们可以对线上增加部分代码进行问题排查和定位。
+
+```java
+public class DynamicAgent {
+
+    public static void main(String[] args) {
+        try {
+            List<VirtualMachineDescriptor> virtualMachineDescriptors = VirtualMachine.list();
+            for (VirtualMachineDescriptor descriptor : virtualMachineDescriptors) {
+                if (descriptor.displayName().equals("session.DaemonApplication")) {
+                    VirtualMachine jvm = VirtualMachine.attach(descriptor);
+                    jvm.loadAgent(
+                            "/Users/sh/workspace/java-knowledge-system/java-agent/build/libs/java-agent-1.0.0-SNAPSHOT.jar");
+                    jvm.detach();
+                }
+            }
+        } catch (AttachNotSupportedException
+                | IOException
+                | AgentLoadException
+                | AgentInitializationException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
 ```
 
-```
+效果图如下：
 
+![image.png](https://s2.loli.net/2023/02/27/Td4IOSoGcFvUjeq.png)
