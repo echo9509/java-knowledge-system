@@ -1,11 +1,9 @@
 package offer;
 
 /**
- * @author sh
- * 旋转数组的最小数字
- *
- * https://leetcode.cn/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/?favorite=xb9nqhhg
- */
+* @author sh 旋转数组的最小数字
+*     <p>https://leetcode.cn/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/?favorite=xb9nqhhg
+*/
 public class RotateArrayMinNumber {
 
     public static int minArray(int[] numbers) {
@@ -24,7 +22,7 @@ public class RotateArrayMinNumber {
     }
 
     public static void main(String[] args) {
-        int[] numbers = new int[]{1,3,5};
+        int[] numbers = new int[] {1, 3, 5};
         System.out.println(minArray(numbers));
     }
 }

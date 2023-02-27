@@ -18,11 +18,10 @@ public class ArrayStack<T> {
     }
 
     /**
-     * 时间复杂度为O(1)
-     * 虽然扩容时为O(n)，但扩容只有在特定时刻发生，所以均摊下来，时间复杂度为O(1)
-     * 入栈
-     * @param data
-     */
+    * 时间复杂度为O(1) 虽然扩容时为O(n)，但扩容只有在特定时刻发生，所以均摊下来，时间复杂度为O(1) 入栈
+    *
+    * @param data
+    */
     public void push(T data) {
         if (count + 1 > capacity) {
             resize();
@@ -31,10 +30,10 @@ public class ArrayStack<T> {
     }
 
     /**
-     * 时间复杂度为O(1)
-     * 出栈
-     * @return
-     */
+    * 时间复杂度为O(1) 出栈
+    *
+    * @return
+    */
     public T pop() {
         if (count == 0) {
             return null;
@@ -44,9 +43,7 @@ public class ArrayStack<T> {
         return data;
     }
 
-    /**
-     * 扩容
-     */
+    /** 扩容 */
     private void resize() {
         // 2倍扩容
         this.capacity = capacity << 1;
@@ -88,7 +85,7 @@ public class ArrayStack<T> {
         stack.print();
 
         stack.pop();
-//        stack.pop();
+        //        stack.pop();
 
         System.out.println("栈内容为：");
         stack.print();

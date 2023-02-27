@@ -11,4 +11,5 @@ rootProject.name = 'java-knowledge-system'
 include 'dbrouter'
 include 'algo'
 include 'spring-session'
+include 'java-agent'
 

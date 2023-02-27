@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * 给定一个不含重复数字的数组 nums，返回其所有可能的全排列。按任意顺序返回答案
- */
+/** 给定一个不含重复数字的数组 nums，返回其所有可能的全排列。按任意顺序返回答案 */
 public class Permute {
 
     public static List<List<Integer>> permute(int[] nums) {
@@ -20,7 +18,8 @@ public class Permute {
         return result;
     }
 
-    private static void backtrack(int n, List<Integer> output, List<List<Integer>> result, int first) {
+    private static void backtrack(
+            int n, List<Integer> output, List<List<Integer>> result, int first) {
         if (first == n) {
             result.add(new ArrayList<>(output));
         }
@@ -46,7 +45,7 @@ public class Permute {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 2, 3};
+        int[] nums = new int[] {1, 2, 3};
         List<List<Integer>> lists = permute(nums);
         print(lists);
     }

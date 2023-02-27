@@ -3,17 +3,15 @@ package list;
 import java.util.Objects;
 import java.util.Scanner;
 
-/**
- * 基于单向链表实现的回文字符串检测
- */
+/** 基于单向链表实现的回文字符串检测 */
 public class PalindromeByLinedList {
 
     /**
-     * 时间复杂度O(n)
-     * 空间复杂度O(n)
-     * @param character
-     * @return
-     */
+    * 时间复杂度O(n) 空间复杂度O(n)
+    *
+    * @param character
+    * @return
+    */
     public static boolean isPalindromeString(Character[] character) {
         Node<Character> node = build(character);
         Node<Character> reserveNode = buildReserveNode(character);
@@ -33,11 +31,11 @@ public class PalindromeByLinedList {
     }
 
     /**
-     * 构造链表并返回头结点
-     *
-     * @param datas
-     * @return
-     */
+    * 构造链表并返回头结点
+    *
+    * @param datas
+    * @return
+    */
     private static Node<Character> build(Character[] datas) {
         // 哨兵头节点
         Node<Character> headNode = new Node<>();
@@ -50,28 +48,27 @@ public class PalindromeByLinedList {
     }
 
     /**
-     * 使用数组构建反向链表
-     * @param datas
-     * @return
-     */
+    * 使用数组构建反向链表
+    *
+    * @param datas
+    * @return
+    */
     private static Node<Character> buildReserveNode(Character[] datas) {
         // 哨兵头节点
         Node<Character> headNode = new Node<>();
         Node<Character> node = headNode;
-        for (int i = datas.length -1; i >= 0; i--) {
+        for (int i = datas.length - 1; i >= 0; i--) {
             node.next = new Node<>(datas[i]);
             node = node.next;
         }
         return headNode;
     }
 
-
     private static class Node<T> {
         private T data;
         private Node<T> next;
 
-        public Node() {
-        }
+        public Node() {}
 
         public Node(T data) {
             this.data = data;

@@ -2,9 +2,7 @@ package queue;
 
 import java.util.Stack;
 
-/**
- *
- */
+/** */
 public class StackQueue {
 
     private Stack<Integer> inStack;

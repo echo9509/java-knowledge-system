@@ -1,0 +1,4 @@
+Agent-Class: cn.sh.agent.Agent
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
+Premain-Class: cn.sh.agent.Agent

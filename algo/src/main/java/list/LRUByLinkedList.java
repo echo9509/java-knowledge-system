@@ -3,27 +3,18 @@ package list;
 import java.util.Objects;
 import java.util.Scanner;
 
-/**
- * 单向链表实现LRU淘汰算法
- * 越靠近尾部访问时间越早
- */
+/** 单向链表实现LRU淘汰算法 越靠近尾部访问时间越早 */
 public class LRUByLinkedList<T> {
 
-    private final static int DEFAULT_CAPACITY = 10;
+    private static final int DEFAULT_CAPACITY = 10;
 
-    /**
-     * 头结点
-     */
+    /** 头结点 */
     private Node<T> headNode;
 
-    /**
-     * 当前链表长度
-     */
+    /** 当前链表长度 */
     private int length;
 
-    /**
-     * 链表总容量
-     */
+    /** 链表总容量 */
     private final int capacity;
 
     public LRUByLinkedList() {
@@ -37,9 +28,10 @@ public class LRUByLinkedList<T> {
     }
 
     /**
-     * 将数据加入缓存
-     * @param data
-     */
+    * 将数据加入缓存
+    *
+    * @param data
+    */
     public void putNode(T data) {
         Node<T> node = findPreNode(data);
         if (node != null) {
@@ -51,10 +43,10 @@ public class LRUByLinkedList<T> {
     }
 
     /**
-     * 将节点插入头结点
-     *
-     * @param data
-     */
+    * 将节点插入头结点
+    *
+    * @param data
+    */
     private void insertDataToHead(T data) {
         headNode.setNext(new Node<>(data, headNode.getNext()));
         length++;
@@ -64,9 +56,7 @@ public class LRUByLinkedList<T> {
         deleteTailNode();
     }
 
-    /**
-     * 删除尾结点
-     */
+    /** 删除尾结点 */
     private void deleteTailNode() {
         Node<T> node = headNode;
         if (node.getNext() == null) {
@@ -80,19 +70,19 @@ public class LRUByLinkedList<T> {
     }
 
     /**
-     * 是否超过容量
-     *
-     * @return
-     */
+    * 是否超过容量
+    *
+    * @return
+    */
     private boolean overCapacity() {
         return length > this.capacity;
     }
 
     /**
-     * 删除node节点的下一个节点
-     *
-     * @param node
-     */
+    * 删除node节点的下一个节点
+    *
+    * @param node
+    */
     private void deleteNextNode(Node<T> node) {
         Node<T> next = node.getNext();
         if (Objects.isNull(next)) {
@@ -103,11 +93,11 @@ public class LRUByLinkedList<T> {
     }
 
     /**
-     * 获取元素的前一个节点
-     *
-     * @param data
-     * @return
-     */
+    * 获取元素的前一个节点
+    *
+    * @param data
+    * @return
+    */
     private Node<T> findPreNode(T data) {
         Node<T> node = headNode;
         while (!Objects.isNull(node.getNext())) {
@@ -128,13 +118,11 @@ public class LRUByLinkedList<T> {
         System.out.println();
     }
 
-
     private static class Node<T> {
         private T data;
         private Node<T> next;
 
-        public Node() {
-        }
+        public Node() {}
 
         public Node(T data, Node<T> next) {
             this.data = data;

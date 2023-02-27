@@ -5,11 +5,12 @@ import java.util.Objects;
 public class RingInLinkedList {
 
     /**
-     * 检测链表中是否有环
-     * @param node
-     * @param <T>
-     * @return
-     */
+    * 检测链表中是否有环
+    *
+    * @param node
+    * @param <T>
+    * @return
+    */
     public static <T> boolean ringInNode(Node<T> node) {
         if (Objects.isNull(node) || Objects.isNull(node.next)) {
             return false;
@@ -26,13 +27,11 @@ public class RingInLinkedList {
         return true;
     }
 
-
     private static class Node<T> {
         private T data;
         private Node<T> next;
 
-        public Node() {
-        }
+        public Node() {}
 
         public Node(T data) {
             this.data = data;
@@ -40,9 +39,10 @@ public class RingInLinkedList {
     }
 
     /**
-     * 检测链表中是否有环
-     * @param args
-     */
+    * 检测链表中是否有环
+    *
+    * @param args
+    */
     public static void main(String[] args) {
         Node<Integer> node1 = new Node<>(1);
         Node<Integer> node2 = new Node<>(2);
@@ -55,9 +55,8 @@ public class RingInLinkedList {
         node3.next = node4;
         node4.next = node5;
         System.out.println("链表" + (ringInNode(node1) ? "有环" : "无环"));
-        //设置成有环链表
+        // 设置成有环链表
         node5.next = node4;
         System.out.println("链表" + (ringInNode(node1) ? "有环" : "无环"));
     }
-
 }

@@ -21,9 +21,7 @@ public class Search {
     }
 
     public static void main(String[] args) {
-        int[] arrays = new int[]{
-          0,1,3,5,7,8,9,10
-        };
-        System.out.println(bsearch(arrays,-7));
+        int[] arrays = new int[] {0, 1, 3, 5, 7, 8, 9, 10};
+        System.out.println(bsearch(arrays, -7));
     }
 }

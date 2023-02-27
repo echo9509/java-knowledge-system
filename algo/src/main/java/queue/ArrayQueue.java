@@ -15,9 +15,10 @@ public class ArrayQueue<T> {
     }
 
     /**
-     * 入队
-     * @param data
-     */
+    * 入队
+    *
+    * @param data
+    */
     public void enqueue(T data) {
         if (queueFull()) {
             System.out.println("队列已满，无法入队");
@@ -31,9 +32,10 @@ public class ArrayQueue<T> {
     }
 
     /**
-     * 出队
-     * @return
-     */
+    * 出队
+    *
+    * @return
+    */
     public T dequeue() {
         if (head == tail) {
             System.out.println("队列已空，无法出队");

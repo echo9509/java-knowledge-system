@@ -1,6 +1,5 @@
 package leetcode;
 
-
 import java.util.Stack;
 
 class Solution {
@@ -18,7 +17,6 @@ class Solution {
         }
         return result;
     }
-
 
     public static class ListNode {
         int val;

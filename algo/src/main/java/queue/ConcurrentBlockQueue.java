@@ -27,10 +27,10 @@ public class ConcurrentBlockQueue<T> {
     }
 
     /**
-     * 入队
-     *
-     * @param data
-     */
+    * 入队
+    *
+    * @param data
+    */
     public void enqueue(T data) throws InterruptedException {
         try {
             lock.lock();
@@ -50,9 +50,7 @@ public class ConcurrentBlockQueue<T> {
         }
     }
 
-    /**
-     * 出队
-     */
+    /** 出队 */
     public T dequeue() throws InterruptedException {
         try {
             lock.lock();
@@ -85,29 +83,31 @@ public class ConcurrentBlockQueue<T> {
 
     public static void main(String[] args) throws InterruptedException {
         ConcurrentBlockQueue<Integer> queue = new ConcurrentBlockQueue<>(4);
-        Runnable put = () -> {
-            try {
-                while (true) {
-                    long sleep = new Random().nextInt(2000);
-                    Thread.sleep(sleep);
-                    int data = new Random().nextInt(10);
-                    queue.enqueue(data);
-                }
-            } catch (InterruptedException e) {
-                System.out.println("发生异常");
-            }
-        };
-        Runnable take = () -> {
-            try {
-                while (true) {
-                    long sleep = new Random().nextInt(5000);
-                    Thread.sleep(sleep);
-                    queue.dequeue();
-                }
-            } catch (InterruptedException e) {
-                System.out.println("发生异常");
-            }
-        };
+        Runnable put =
+                () -> {
+                    try {
+                        while (true) {
+                            long sleep = new Random().nextInt(2000);
+                            Thread.sleep(sleep);
+                            int data = new Random().nextInt(10);
+                            queue.enqueue(data);
+                        }
+                    } catch (InterruptedException e) {
+                        System.out.println("发生异常");
+                    }
+                };
+        Runnable take =
+                () -> {
+                    try {
+                        while (true) {
+                            long sleep = new Random().nextInt(5000);
+                            Thread.sleep(sleep);
+                            queue.dequeue();
+                        }
+                    } catch (InterruptedException e) {
+                        System.out.println("发生异常");
+                    }
+                };
         ExecutorService putExecutor = Executors.newFixedThreadPool(3);
         for (int i = 0; i < 3; i++) {
             putExecutor.submit(put);

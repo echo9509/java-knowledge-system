@@ -2,14 +2,14 @@ package list;
 
 public class RemoveNodeInLinkedList {
 
-
     /**
-     * 删除倒数第K个节点
-     * @param node
-     * @param k
-     * @param <T>
-     * @return
-     */
+    * 删除倒数第K个节点
+    *
+    * @param node
+    * @param k
+    * @param <T>
+    * @return
+    */
     public static <T> Node<T> removeNode(Node<T> node, int k) {
         Node<T> fast = node;
         int i = 1;
@@ -45,19 +45,16 @@ public class RemoveNodeInLinkedList {
         System.out.println();
     }
 
-
     private static class Node<T> {
         private T data;
         private Node<T> next;
 
-        public Node() {
-        }
+        public Node() {}
 
         public Node(T data) {
             this.data = data;
         }
     }
-
 
     public static void main(String[] args) {
         Node<Integer> node1 = new Node<>(1);

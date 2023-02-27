@@ -1,21 +1,21 @@
 package list;
 
-
 public class MidNodeInLinkedList {
 
     /**
-     * 求链表中间节点
-     * @param node
-     * @param <T>
-     * @return
-     */
+    * 求链表中间节点
+    *
+    * @param node
+    * @param <T>
+    * @return
+    */
     public static <T> Node<T> midNode(Node<T> node) {
         if (node == null || node.next == null || node.next.next == null) {
             return node;
         }
         Node<T> slow = node;
         Node<T> fast = node;
-        while (fast!= null && fast.next != null) {
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
@@ -31,13 +31,11 @@ public class MidNodeInLinkedList {
         System.out.println();
     }
 
-
     private static class Node<T> {
         private T data;
         private Node<T> next;
 
-        public Node() {
-        }
+        public Node() {}
 
         public Node(T data) {
             this.data = data;

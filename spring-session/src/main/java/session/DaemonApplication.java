@@ -3,9 +3,7 @@ package session;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * @author sh
- */
+/** @author sh */
 @SpringBootApplication
 public class DaemonApplication {
 

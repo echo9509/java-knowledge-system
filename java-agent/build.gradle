@@ -1,0 +1,31 @@
+plugins {
+    id 'application'
+}
+
+group 'cn.sh.agent'
+version '1.0.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'javassist:javassist:3.12.1.GA'
+
+}
+
+jar {
+    manifest {
+        from file('src/main/resources/META-INF/MANIFEST.MF')
+    }
+    from {
+        (configurations.runtimeClasspath).collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

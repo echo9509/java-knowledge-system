@@ -15,9 +15,10 @@ public class CircularQueue<T> {
     }
 
     /**
-     * 入队
-     * @param data
-     */
+    * 入队
+    *
+    * @param data
+    */
     public void enqueue(T data) {
         if (size == capacity) {
             System.out.println("队列满了，无法入队");
@@ -28,9 +29,7 @@ public class CircularQueue<T> {
         size++;
     }
 
-    /**
-     * 出队
-     */
+    /** 出队 */
     public T dequeue() {
         if (head == tail && size == 0) {
             System.out.println("队列已空，无法出队");
@@ -45,7 +44,7 @@ public class CircularQueue<T> {
     public void print() {
         System.out.print("当前队列内容：");
         int end = head + size;
-        for (int i = head ; i < end; i ++) {
+        for (int i = head; i < end; i++) {
             System.out.print(items[i % capacity] + ",");
         }
         System.out.println();

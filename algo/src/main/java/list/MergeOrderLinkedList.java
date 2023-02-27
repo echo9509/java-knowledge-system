@@ -2,14 +2,13 @@ package list;
 
 public class MergeOrderLinkedList {
 
-
     /**
-     * 合并两个有序链表
-     *
-     * @param firstNode
-     * @param secondNode
-     * @return
-     */
+    * 合并两个有序链表
+    *
+    * @param firstNode
+    * @param secondNode
+    * @return
+    */
     public static Node<Integer> mergeOrderNode(Node<Integer> firstNode, Node<Integer> secondNode) {
         if (firstNode == null) {
             return secondNode;
@@ -52,8 +51,7 @@ public class MergeOrderLinkedList {
         private T data;
         private Node<T> next;
 
-        public Node() {
-        }
+        public Node() {}
 
         public Node(T data) {
             this.data = data;
@@ -61,10 +59,10 @@ public class MergeOrderLinkedList {
     }
 
     /**
-     * 合并两个有序链表
-     *
-     * @param args
-     */
+    * 合并两个有序链表
+    *
+    * @param args
+    */
     public static void main(String[] args) {
         Node<Integer> headNode = new Node<>();
         Node<Integer> node1 = new Node<>(1);

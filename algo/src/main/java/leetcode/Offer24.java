@@ -1,6 +1,5 @@
 package leetcode;
 
-
 public class Offer24 {
 
     public ListNode reverseList(ListNode head) {

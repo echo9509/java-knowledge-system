@@ -1,16 +1,15 @@
 package list;
 
-/**
- * 反置链表
- */
+/** 反置链表 */
 public class ReservedLinkedList {
 
     /**
-     * 反置链表
-     * @param node
-     * @param <T>
-     * @return
-     */
+    * 反置链表
+    *
+    * @param node
+    * @param <T>
+    * @return
+    */
     public static <T> Node<T> reverseNode(Node<T> node) {
         Node<T> headNode = new Node<>();
         Node<T> current = node.next;
@@ -24,11 +23,12 @@ public class ReservedLinkedList {
     }
 
     /**
-     * 构建链表
-     * @param datas
-     * @param <T>
-     * @return
-     */
+    * 构建链表
+    *
+    * @param datas
+    * @param <T>
+    * @return
+    */
     public static <T> Node<T> buildNode(T[] datas) {
         Node<T> headNode = new Node<>();
         Node<T> node = headNode;
@@ -52,8 +52,7 @@ public class ReservedLinkedList {
         private T data;
         private Node<T> next;
 
-        public Node() {
-        }
+        public Node() {}
 
         public Node(T data) {
             this.data = data;
@@ -61,11 +60,12 @@ public class ReservedLinkedList {
     }
 
     /**
-     * 反置链表
-     * @param args
-     */
+    * 反置链表
+    *
+    * @param args
+    */
     public static void main(String[] args) {
-        Integer [] test = new Integer[]{1,3,5,6,7,8,1};
+        Integer[] test = new Integer[] {1, 3, 5, 6, 7, 8, 1};
         Node<Integer> node = buildNode(test);
         System.out.println("正向链表：");
         printAll(node);
