@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.IllegalClassFormatException;
 import java.lang.instrument.Instrumentation;
+import java.lang.instrument.UnmodifiableClassException;
 import java.security.ProtectionDomain;
 import javassist.CannotCompileException;
 import javassist.ClassPool;
@@ -19,6 +20,19 @@ public class Agent {
 
     public static void agentmain(String agentArgs, Instrumentation inst) {
         recordMethodCostTime(inst);
+        Class<?>[] classes = inst.getAllLoadedClasses();
+        try {
+            for (Class<?> c : classes) {
+                if (c.isAnnotation() || c.isInterface() || c.isArray() || c.isEnum()) {
+                    continue;
+                }
+                if (c.getName().startsWith("session.controller")) {
+                    inst.retransformClasses(c);
+                }
+            }
+        } catch (UnmodifiableClassException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void recordMethodCostTime(Instrumentation inst) {
